@@ -9,18 +9,18 @@ Get the password hash for a user by using the org.eclipse.jetty.util.security.Pa
 
 **Powershell**
 ```psh
-Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/12.0.0/jetty-util-12.0.0-config.jar" -OutFile "$env:TEMP\jetty-util.jar"
+Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.4.43.v20210629/jetty-util-9.4.43.v20210629.jar" -OutFile "$env:TEMP\jetty-util.jar"
 java -cp "$env:TEMP\jetty-util.jar" org.eclipse.jetty.util.security.Password letmein
 Remove-Item "$env:TEMP\jetty-util.jar"
 ```
 
 **Curl and WGET**
 ```bash
-curl -s https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/12.0.0/jetty-util-12.0.0-config.jar -o /tmp/jetty-util.jar && \
+curl -s https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.4.43.v20210629/jetty-util-9.4.43.v20210629.jar -o /tmp/jetty-util.jar && \
 java -cp /tmp/jetty-util.jar org.eclipse.jetty.util.security.Password letmein && \
 rm /tmp/jetty-util.jar
 
-wget -q https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/12.0.0/jetty-util-12.0.0-config.jar -O /tmp/jetty-util.jar && \
+wget -q https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.4.43.v20210629/jetty-util-9.4.43.v20210629.jar -O /tmp/jetty-util.jar && \
 java -cp /tmp/jetty-util.jar org.eclipse.jetty.util.security.Password letmein && \
 rm /tmp/jetty-util.jar
 ```
